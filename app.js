@@ -3,11 +3,25 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var apiRouter = require('./routes/api');
 
 var app = express();
+mongoose.Promise = global.Promise;
+
+ mongoose.connect('mongodb://localhost/buscador-bebidas', { useNewUrlParser: true })
+.then(()=> { console.log("La conexion con la base de datos fue exitosa")})
+.catch((err)=>{console.log("Hubo un error en la conexion con la base: " + err)}); 
+
+
+/* mongoose.connect ("mongodb+srv://user:user@cluster0-ygtqr.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true })
+.then(()=> { console.log("La conexion con la base de datos fue exitosa")})
+.catch((err)=>{console.log("Hubo un error en la conexion con la base: " + err)});
+ */
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -19,8 +33,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+ app.use('/', indexRouter);
+app.use('/api/Buscadorbebidas',apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

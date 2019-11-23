@@ -1,8 +1,19 @@
 body {
-  padding: 50px;
+  padding-top: 30px; 
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ background-color: #e1f7fa;
+ color: rgba(241, 79, 4, 0.918);
+}
+
+h1{
+  font-family: 'Calistoga', cursive;
+  color: rgba(241, 79, 4, 0.918);
 }
 
 a {
-  color: #00B7FF;
+  color: rgba(213, 4, 241, 0.918);
+}
+
+.font-2{
+  font-size: 1.3rem;
 }

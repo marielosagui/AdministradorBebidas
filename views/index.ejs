@@ -4,7 +4,7 @@
     <title>Administrador de Bebidas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
+    <link href=https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet"> 
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
@@ -18,10 +18,20 @@
                 <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
               </div>
 
-              <div class="form-group mx-sm-3 mb-2">
+             <!--  <div class="form-group mx-sm-3 mb-2">
                 <label for="tipo" class="sr-only">tipo</label>
                 <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo Bebida">
-              </div>
+              </div> -->
+
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="tipo"></label> 
+                <select name="tipo" class="form-control" id="tipo">
+                    <option>-tipo bebida-</option>
+                    <option>Jugo</option>
+                    <option>Cerveza</option>
+                    <option>Soda</option>
+                </select>
+            </div>
 
               <div class="form-group mx-sm-3 mb-2">
                 <label for="precio" class="sr-only">Precio</label>
@@ -61,8 +71,8 @@
                     <td>
                         <p class="mb-0 d-none">La Constancia</p>
                         <div class="form-group mx-sm-3 mb-2">
-                            <label for="version" class="sr-only">Tipo</label>
-                            <input type="text" class="form-control" name="version" placeholder="jugo">
+                            <label for="tipo" class="sr-only">Tipo</label>
+                            <input type="" class="form-control" name="tipo" >
                         </div>
                     </td>
 
@@ -96,6 +106,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="javascripts/main.js"></script>
+    <script src="../public/javascripts/main.js"></script>
   </body>
 </html>
