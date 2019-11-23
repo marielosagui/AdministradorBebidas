@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('parcialfinal:server');
+var debug = require('debug')('parcialwebfin:server');
 var http = require('http');
 
 /**

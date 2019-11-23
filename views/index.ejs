@@ -1,111 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Administrador de Bebidas</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link href=https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet"> 
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="text-center text-primary font-weigh-bold">Administrador de Bebidas</h1>
 
-      <section>
-          <form class="form-inline d-flex justify-content-center my-4">
-              <div class="form-group mx-sm-3 mb-2">
-                <label for="nombre" class="sr-only">Password</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
-              </div>
+<head>
+  <title> Administrador de Bebidas</title>
+  <link rel='stylesheet' href='../public/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href=https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
 
-             <!--  <div class="form-group mx-sm-3 mb-2">
-                <label for="tipo" class="sr-only">tipo</label>
-                <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo Bebida">
-              </div> -->
 
-              <div class="form-group mx-sm-3 mb-2">
-                <label for="tipo"></label> 
-                <select name="tipo" class="form-control" id="tipo">
-                    <option>-tipo bebida-</option>
-                    <option>Jugo</option>
-                    <option>Cerveza</option>
-                    <option>Soda</option>
-                </select>
-            </div>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
 
-              <div class="form-group mx-sm-3 mb-2">
-                <label for="precio" class="sr-only">Precio</label>
-                <input type="text" class="form-control" id="precio" name="precio" placeholder="Precio 0.0">
-              </div>
-              <div class="form-group mx-sm-3 mb-2">
-                <label for="company" class="sr-only">Compañia</label>
-                <input type="text" class="form-control" id="company" name="company" placeholder="Nombre Compañia">
-              </div>
-              <button type="button" class="btn btn-primary mb-2" id="save-new">Guardar Registro</button>
-            </form>
-      </section>
-
-      <section>
-          <table class="table table-striped table-hover table-bordered w-100 text-center align-middle mt-4" id="table-browser">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Tipo</th>
-                  <th scope="col">Precio</th>
-                  <th scope="col">Compañia</th>
-                  <th scope="col">Opciones Administrador</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <form class="form">
-                    <th scope="row">1</th>
-                    <td>
-                      <p class="mb-0 d-none">La constancia</p>
-                      <div class="form-group mx-sm-3 mb-2">
-                          <label for="nombre" class="sr-only">Password</label>
-                          <input type="text" class="form-control" name="nombre" placeholder="Nombre">
-                      </div>
-                    </td>
-                    <td>
-                        <p class="mb-0 d-none">La Constancia</p>
-                        <div class="form-group mx-sm-3 mb-2">
-                            <label for="tipo" class="sr-only">Tipo</label>
-                            <input type="" class="form-control" name="tipo" >
-                        </div>
-                    </td>
-
-                    <td>
-                      <p class="mb-0 d-none">La Constancia</p>
-                      <div class="form-group mx-sm-3 mb-2">
-                          <label for="version" class="sr-only">Precio</label>
-                          <input type="text" class="form-control" name="version" placeholder="0.0">
-                      </div>
-                  </td>
-                    <td>
-                        <p class="mb-0 d-none">La constancia</p>
-                        <div class="form-group mx-sm-3 mb-2">
-                            <label for="company" class="sr-only">Compañia</label>
-                            <input type="text" class="form-control" name="company" placeholder="Salva Cola">
-                        </div>
-                    </td>
-                    <td class="text-center">
-                        <button type="button" class="btn btn-primary  mx-2"><i class="fas fa-edit font-2"></i></button>
-                        <button type="button" class="btn btn-danger  mx-2"><i class="fas fa-trash-alt font-2"></i></button>
-                        <button type="button" class="btn btn-success d-none mx-2"><i class="fas fa-check-circle font-2"></i></button>
-                        <button type="button" class="btn btn-danger d-none mx-2"><i class="fas fa-times-circle font-2"></i></button>
-                    </td>
-                  </form>
-                </tr>
-              </tbody>
-            </table>
-      </section>
+<body>
+  <h1> Administrador de Bebidas</h1>
+  <br>
+  <form action="/api" id="fTareas" name="fTareas" method="post">
+    <div>
+      <label for="nombre">NOMBRE</label>
+      <input type="text" name="nombre">
+      <br>
+      <label for="tipo">TIPO</label>
+      <input type="text" name="tipo">
+      <br>
+      <label for="precio">PRECIO</label>
+      <input type="text" name="precio">
+      <br>
+      <label for="distribuidor">DISTRIBUIDOR</label>
+      <input type="text" name="distribuidor">
     </div>
+    <input type="submit" value="enviar">
+  </form>
+  <br>
+  <br>
+  <br>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Precio</th>
+        <th>Distribuidor</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody id="llenar"></tbody>
+  </table>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="../public/javascripts/main.js"></script>
-  </body>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Actualización</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="" name="formU" id="formU">
+          <div class="modal-body">
+            <input type="hidden" name="idTarea">
+            <input type="text" name="nombre" class="form-control">
+            <br>
+            <input type="text" name="tipo" class="form-control" >
+            <br>
+            <input type="text" name="precio" class="form-control" >
+            <br>
+            <input type="text" name="distribuidor" class="form-control" >
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <input type="submit" class="btn btn-primary" value="Save changes">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="/javascripts/main.js"></script>
+</body>
+
 </html>
