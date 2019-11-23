@@ -67,8 +67,8 @@ function tareas() {
                 <td>${element.precio}</td>
                 <td>${element.distribuidor}</td>
                 <td>
+                    <a href="/api/Bestiario/${element._id}" class="actualizar btn btn-info" data-toggle="modal" data-target="#exampleModal">Actualizar</a>
                     <a href="/api/Bestiario/${element._id}" class="eliminar btn btn-danger">Eliminar</a>
-                    <a href="/api/Bestiario/${element._id}" class="actualizar btn btn-warning" data-toggle="modal" data-target="#exampleModal">Actualizar</a>
                 </td>
                 <tr/>`
             });
